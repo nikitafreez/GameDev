@@ -83,6 +83,9 @@
             this.WorkerInsertButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.FilterPositionButton = new System.Windows.Forms.Button();
+            this.FilterPositionBox = new System.Windows.Forms.TextBox();
             this.PositionUpdateButton = new System.Windows.Forms.Button();
             this.PositionSalaryBox = new System.Windows.Forms.TextBox();
             this.PositionDeleteButton = new System.Windows.Forms.Button();
@@ -92,7 +95,13 @@
             this.PositionInsertButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.FilterGenreButton = new System.Windows.Forms.Button();
+            this.FilterGenreBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.FilterDepartmentButton = new System.Windows.Forms.Button();
+            this.FilterDepartmentBox = new System.Windows.Forms.TextBox();
             this.TeamLeadComboBox = new System.Windows.Forms.ComboBox();
             this.DepartmentUpdateButton = new System.Windows.Forms.Button();
             this.DepartmentDeleteButton = new System.Windows.Forms.Button();
@@ -102,6 +111,9 @@
             this.DepartmentIsertButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.FilterDesignDocButton = new System.Windows.Forms.Button();
+            this.FilterDesignDocBox = new System.Windows.Forms.TextBox();
             this.MainAuthorComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -110,18 +122,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.FilterPositionButton = new System.Windows.Forms.Button();
-            this.FilterPositionBox = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.FilterGenreButton = new System.Windows.Forms.Button();
-            this.FilterGenreBox = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.FilterDepartmentButton = new System.Windows.Forms.Button();
-            this.FilterDepartmentBox = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.FilterDesignDocButton = new System.Windows.Forms.Button();
-            this.FilterDesignDocBox = new System.Windows.Forms.TextBox();
+            this.ExcelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Genre_dataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
@@ -312,6 +313,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.ExcelButton);
             this.tabPage6.Controls.Add(this.label22);
             this.tabPage6.Controls.Add(this.FilterGameButton);
             this.tabPage6.Controls.Add(this.FilterGameBox);
@@ -332,7 +334,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(553, 421);
+            this.tabPage6.Size = new System.Drawing.Size(556, 429);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Игры";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -528,7 +530,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(553, 421);
+            this.tabPage3.Size = new System.Drawing.Size(556, 429);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Сотрудники";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -732,10 +734,38 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(553, 421);
+            this.tabPage2.Size = new System.Drawing.Size(556, 429);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Должности";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(344, 138);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(59, 17);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Фильтр";
+            // 
+            // FilterPositionButton
+            // 
+            this.FilterPositionButton.Location = new System.Drawing.Point(480, 156);
+            this.FilterPositionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterPositionButton.Name = "FilterPositionButton";
+            this.FilterPositionButton.Size = new System.Drawing.Size(63, 23);
+            this.FilterPositionButton.TabIndex = 50;
+            this.FilterPositionButton.Text = "Найти";
+            this.FilterPositionButton.UseVisualStyleBackColor = true;
+            this.FilterPositionButton.Click += new System.EventHandler(this.FilterPositionButton_Click);
+            // 
+            // FilterPositionBox
+            // 
+            this.FilterPositionBox.Location = new System.Drawing.Point(347, 157);
+            this.FilterPositionBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterPositionBox.Name = "FilterPositionBox";
+            this.FilterPositionBox.Size = new System.Drawing.Size(127, 22);
+            this.FilterPositionBox.TabIndex = 49;
             // 
             // PositionUpdateButton
             // 
@@ -837,10 +867,38 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(553, 421);
+            this.tabPage1.Size = new System.Drawing.Size(556, 429);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Жанры";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(345, 138);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(59, 17);
+            this.label25.TabIndex = 54;
+            this.label25.Text = "Фильтр";
+            // 
+            // FilterGenreButton
+            // 
+            this.FilterGenreButton.Location = new System.Drawing.Point(481, 156);
+            this.FilterGenreButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterGenreButton.Name = "FilterGenreButton";
+            this.FilterGenreButton.Size = new System.Drawing.Size(63, 23);
+            this.FilterGenreButton.TabIndex = 53;
+            this.FilterGenreButton.Text = "Найти";
+            this.FilterGenreButton.UseVisualStyleBackColor = true;
+            this.FilterGenreButton.Click += new System.EventHandler(this.FilterGenreButton_Click);
+            // 
+            // FilterGenreBox
+            // 
+            this.FilterGenreBox.Location = new System.Drawing.Point(348, 157);
+            this.FilterGenreBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterGenreBox.Name = "FilterGenreBox";
+            this.FilterGenreBox.Size = new System.Drawing.Size(127, 22);
+            this.FilterGenreBox.TabIndex = 52;
             // 
             // tabPage4
             // 
@@ -858,10 +916,38 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(553, 421);
+            this.tabPage4.Size = new System.Drawing.Size(556, 429);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Отделы";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(344, 136);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(59, 17);
+            this.label26.TabIndex = 54;
+            this.label26.Text = "Фильтр";
+            // 
+            // FilterDepartmentButton
+            // 
+            this.FilterDepartmentButton.Location = new System.Drawing.Point(480, 154);
+            this.FilterDepartmentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterDepartmentButton.Name = "FilterDepartmentButton";
+            this.FilterDepartmentButton.Size = new System.Drawing.Size(63, 23);
+            this.FilterDepartmentButton.TabIndex = 53;
+            this.FilterDepartmentButton.Text = "Найти";
+            this.FilterDepartmentButton.UseVisualStyleBackColor = true;
+            this.FilterDepartmentButton.Click += new System.EventHandler(this.FilterDepartmentButton_Click);
+            // 
+            // FilterDepartmentBox
+            // 
+            this.FilterDepartmentBox.Location = new System.Drawing.Point(347, 155);
+            this.FilterDepartmentBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterDepartmentBox.Name = "FilterDepartmentBox";
+            this.FilterDepartmentBox.Size = new System.Drawing.Size(127, 22);
+            this.FilterDepartmentBox.TabIndex = 52;
             // 
             // TeamLeadComboBox
             // 
@@ -963,10 +1049,38 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(553, 421);
+            this.tabPage5.Size = new System.Drawing.Size(556, 429);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Диз-доки";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(344, 136);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(59, 17);
+            this.label27.TabIndex = 54;
+            this.label27.Text = "Фильтр";
+            // 
+            // FilterDesignDocButton
+            // 
+            this.FilterDesignDocButton.Location = new System.Drawing.Point(480, 154);
+            this.FilterDesignDocButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterDesignDocButton.Name = "FilterDesignDocButton";
+            this.FilterDesignDocButton.Size = new System.Drawing.Size(63, 23);
+            this.FilterDesignDocButton.TabIndex = 53;
+            this.FilterDesignDocButton.Text = "Найти";
+            this.FilterDesignDocButton.UseVisualStyleBackColor = true;
+            this.FilterDesignDocButton.Click += new System.EventHandler(this.FilterDesignDocButton_Click);
+            // 
+            // FilterDesignDocBox
+            // 
+            this.FilterDesignDocBox.Location = new System.Drawing.Point(347, 155);
+            this.FilterDesignDocBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FilterDesignDocBox.Name = "FilterDesignDocBox";
+            this.FilterDesignDocBox.Size = new System.Drawing.Size(127, 22);
+            this.FilterDesignDocBox.TabIndex = 52;
             // 
             // MainAuthorComboBox
             // 
@@ -1053,117 +1167,15 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Главный автор";
             // 
-            // label24
+            // ExcelButton
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(344, 138);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(59, 17);
-            this.label24.TabIndex = 51;
-            this.label24.Text = "Фильтр";
-            // 
-            // FilterPositionButton
-            // 
-            this.FilterPositionButton.Location = new System.Drawing.Point(480, 156);
-            this.FilterPositionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterPositionButton.Name = "FilterPositionButton";
-            this.FilterPositionButton.Size = new System.Drawing.Size(63, 23);
-            this.FilterPositionButton.TabIndex = 50;
-            this.FilterPositionButton.Text = "Найти";
-            this.FilterPositionButton.UseVisualStyleBackColor = true;
-            this.FilterPositionButton.Click += new System.EventHandler(this.FilterPositionButton_Click);
-            // 
-            // FilterPositionBox
-            // 
-            this.FilterPositionBox.Location = new System.Drawing.Point(347, 157);
-            this.FilterPositionBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterPositionBox.Name = "FilterPositionBox";
-            this.FilterPositionBox.Size = new System.Drawing.Size(127, 22);
-            this.FilterPositionBox.TabIndex = 49;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(345, 138);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 17);
-            this.label25.TabIndex = 54;
-            this.label25.Text = "Фильтр";
-            // 
-            // FilterGenreButton
-            // 
-            this.FilterGenreButton.Location = new System.Drawing.Point(481, 156);
-            this.FilterGenreButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterGenreButton.Name = "FilterGenreButton";
-            this.FilterGenreButton.Size = new System.Drawing.Size(63, 23);
-            this.FilterGenreButton.TabIndex = 53;
-            this.FilterGenreButton.Text = "Найти";
-            this.FilterGenreButton.UseVisualStyleBackColor = true;
-            this.FilterGenreButton.Click += new System.EventHandler(this.FilterGenreButton_Click);
-            // 
-            // FilterGenreBox
-            // 
-            this.FilterGenreBox.Location = new System.Drawing.Point(348, 157);
-            this.FilterGenreBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterGenreBox.Name = "FilterGenreBox";
-            this.FilterGenreBox.Size = new System.Drawing.Size(127, 22);
-            this.FilterGenreBox.TabIndex = 52;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(344, 136);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(59, 17);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "Фильтр";
-            // 
-            // FilterDepartmentButton
-            // 
-            this.FilterDepartmentButton.Location = new System.Drawing.Point(480, 154);
-            this.FilterDepartmentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterDepartmentButton.Name = "FilterDepartmentButton";
-            this.FilterDepartmentButton.Size = new System.Drawing.Size(63, 23);
-            this.FilterDepartmentButton.TabIndex = 53;
-            this.FilterDepartmentButton.Text = "Найти";
-            this.FilterDepartmentButton.UseVisualStyleBackColor = true;
-            this.FilterDepartmentButton.Click += new System.EventHandler(this.FilterDepartmentButton_Click);
-            // 
-            // FilterDepartmentBox
-            // 
-            this.FilterDepartmentBox.Location = new System.Drawing.Point(347, 155);
-            this.FilterDepartmentBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterDepartmentBox.Name = "FilterDepartmentBox";
-            this.FilterDepartmentBox.Size = new System.Drawing.Size(127, 22);
-            this.FilterDepartmentBox.TabIndex = 52;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(344, 136);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(59, 17);
-            this.label27.TabIndex = 54;
-            this.label27.Text = "Фильтр";
-            // 
-            // FilterDesignDocButton
-            // 
-            this.FilterDesignDocButton.Location = new System.Drawing.Point(480, 154);
-            this.FilterDesignDocButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterDesignDocButton.Name = "FilterDesignDocButton";
-            this.FilterDesignDocButton.Size = new System.Drawing.Size(63, 23);
-            this.FilterDesignDocButton.TabIndex = 53;
-            this.FilterDesignDocButton.Text = "Найти";
-            this.FilterDesignDocButton.UseVisualStyleBackColor = true;
-            this.FilterDesignDocButton.Click += new System.EventHandler(this.FilterDesignDocButton_Click);
-            // 
-            // FilterDesignDocBox
-            // 
-            this.FilterDesignDocBox.Location = new System.Drawing.Point(347, 155);
-            this.FilterDesignDocBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FilterDesignDocBox.Name = "FilterDesignDocBox";
-            this.FilterDesignDocBox.Size = new System.Drawing.Size(127, 22);
-            this.FilterDesignDocBox.TabIndex = 52;
+            this.ExcelButton.Location = new System.Drawing.Point(481, 10);
+            this.ExcelButton.Name = "ExcelButton";
+            this.ExcelButton.Size = new System.Drawing.Size(63, 23);
+            this.ExcelButton.TabIndex = 49;
+            this.ExcelButton.Text = "Excel";
+            this.ExcelButton.UseVisualStyleBackColor = true;
+            this.ExcelButton.Click += new System.EventHandler(this.ExcelButton_Click);
             // 
             // Form1
             // 
@@ -1296,6 +1308,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button FilterDesignDocButton;
         private System.Windows.Forms.TextBox FilterDesignDocBox;
+        private System.Windows.Forms.Button ExcelButton;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace GameDev
 {
@@ -959,7 +960,7 @@ namespace GameDev
         #endregion
         //100% complete
         #region Login Code
-
+        
         private void LoginButton_Click(object sender, EventArgs e)
         {
             connection = new SqlConnection(conString);
@@ -980,6 +981,7 @@ namespace GameDev
                 connection.Close();
             }
         }
+        
 
         private void RegistrationButton_Click(object sender, EventArgs e)
         {
@@ -1144,5 +1146,59 @@ namespace GameDev
         {
             GetTables();
         }
+        //99% complete
+        #region Excel code
+
+        public class Game
+        {
+            public string Game_Name { get; set; }
+            public int Game_Price { get; set; }
+            public string Release_Date { get; set; }
+        }
+
+        private void ExcelButton_Click(object sender, EventArgs e)
+        {
+            int totalRows = Game_dataGridView.RowCount;
+            var GameList = new List<Game>();
+            for (int i = 0; i < totalRows; i++)
+            {
+                GameList.Add(new Game
+                {
+                    Game_Name = Game_dataGridView.Rows[i].Cells[1].Value.ToString(),
+                    Game_Price = Convert.ToInt32(Game_dataGridView.Rows[i].Cells[2].Value.ToString()),
+                    Release_Date = Game_dataGridView.Rows[i].Cells[3].Value.ToString().Substring(0, 10)
+                });
+            }
+            DisplayInExcel(GameList);
+        }
+
+        static void DisplayInExcel(IEnumerable<Game> games)
+        {
+            var excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            excelApp.Workbooks.Add();
+
+            Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+            workSheet.Cells[1, "A"] = "Game_Name";
+            workSheet.Cells[1, "B"] = "Game_Price";
+            workSheet.Cells[1, "C"] = "Release_Date";
+
+
+            var row = 1;
+            foreach (var gms in games)
+            {
+                row++;
+                workSheet.Cells[row, "A"] = gms.Game_Name;
+                workSheet.Cells[row, "B"] = gms.Game_Price;
+                workSheet.Cells[row, "C"] = gms.Release_Date;
+            }
+
+            workSheet.Columns[1].AutoFit();
+            workSheet.Columns[2].AutoFit();
+            workSheet.Columns[3].AutoFit();
+        }
+        #endregion
     }
 }

@@ -8,3 +8,13 @@ C:\Users\nikit\source\repos\GameDev\bin\Debug\GameDev.pdb
 C:\Users\nikit\source\repos\GameDev\obj\Debug\GameDev.Form1.resources
 C:\Users\nikit\source\repos\GameDev\obj\Debug\GameDev.exe
 C:\Users\nikit\source\repos\GameDev\obj\Debug\GameDev.pdb
+D:\C#.Programs\GameDev\bin\Debug\GameDev.exe.config
+D:\C#.Programs\GameDev\bin\Debug\GameDev.exe
+D:\C#.Programs\GameDev\bin\Debug\GameDev.pdb
+D:\C#.Programs\GameDev\obj\Debug\GameDev.csprojAssemblyReference.cache
+D:\C#.Programs\GameDev\obj\Debug\GameDev.Form1.resources
+D:\C#.Programs\GameDev\obj\Debug\GameDev.Properties.Resources.resources
+D:\C#.Programs\GameDev\obj\Debug\GameDev.csproj.GenerateResource.cache
+D:\C#.Programs\GameDev\obj\Debug\GameDev.csproj.CoreCompileInputs.cache
+D:\C#.Programs\GameDev\obj\Debug\GameDev.exe
+D:\C#.Programs\GameDev\obj\Debug\GameDev.pdb
